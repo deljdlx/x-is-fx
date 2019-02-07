@@ -7,7 +7,7 @@ require(__DIR__.'/source/class/Operator.php');
 require(__DIR__.'/source/class/Operator/Pour.php');
 
 
-require(__DIR__.'/source/class/Termr/x.php');
+require(__DIR__.'/source/class/Term/x.php');
 
 
 $construction = new XIsFx\Construction();
