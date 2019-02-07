@@ -7,6 +7,7 @@ class Construction
 {
     public function __construct($name = null, $parent = null)
     {
+        $this->namespace = 'XIsFx';
         $this->childrenByName = [];
         $this->children = [];
         $this->name = $name;
@@ -29,9 +30,16 @@ class Construction
 
     public function __call($methodName, $parameters)
     {
-        $operator = new Operator($methodName, $this);
+        $className = $this->namespace.'\\Operator\\'.$methodName;
+        if(class_exists($className)) {
+            $operator = new $className($methodName, $this);
+        }
+        else {
+            $operator = new Operator($methodName, $this);
+        }
         $this->childrenByName[$methodName] = $operator;
         $this->children[] = $operator;
+
         return $operator;
     }
 
