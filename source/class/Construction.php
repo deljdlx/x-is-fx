@@ -21,7 +21,14 @@ class Construction
             return $this->childrenByName[$name];
         }
 
-        $contruction = new Construction($name, $this);
+        $className = $this->namespace.'\\term\\'.$name;
+        if(class_exists($className)) {
+            $contruction = new $className($name, $this);
+        }
+        else {
+            $contruction = new Construction($name, $this);
+        }
+
         $this->childrenByName[$name] = $contruction;
         $this->children[] = $contruction;
 
