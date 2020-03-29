@@ -1,6 +1,11 @@
-<?php
+# x is Fx
 
-require(__DIR__.'/bootstrap.php');
+Warning ! This is just a proof of concept.
+
+This a proof of concept for formal automats"
+
+## Exemple
+```php
 
 $construction = new XIsFx\Construction();
 
@@ -36,6 +41,5 @@ $construction
             ->avec()
     ->x
 ;
-echo $construction->render();
-echo PHP_EOL;
 
+```
