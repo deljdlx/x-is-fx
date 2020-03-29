@@ -2,7 +2,7 @@
 
 Warning ! This is just a proof of concept.
 
-This a proof of concept for formal automats"
+It is a test to build some "complex logical contructions" with PHP
 
 ## Exemple
 ```php
