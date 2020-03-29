@@ -38,4 +38,15 @@ $construction
 ;
 echo $construction->render();
 echo PHP_EOL;
+$construction = new XIsFx\Construction();
+$construction
+    ->∀()->x
+        ->∈()->E
+        ->∃()->z
+            ->∈()->E
+            ->z->≠()->x
+            ->text('/')
+                ->f('z')->equal('x')
+    ;
+echo $construction->render();
 

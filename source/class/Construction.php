@@ -5,6 +5,9 @@ namespace XIsFx;
 
 class Construction
 {
+
+    protected $parameters = [];
+
     public function __construct($name = null, $parent = null)
     {
         $this->namespace = 'XIsFx';
@@ -13,6 +16,13 @@ class Construction
         $this->name = $name;
         $this->parent = $parent;
 
+    }
+
+
+    public function setParameters($parameters)
+    {
+        $this->parameters = $parameters;
+        return $this;
     }
 
     public function  __get($name)
@@ -44,9 +54,28 @@ class Construction
         else {
             $operator = new Operator($methodName, $this);
         }
+
+        $operator->setParameters($parameters);
+
+
         $this->childrenByName[$methodName] = $operator;
         $this->children[] = $operator;
+        return $operator;
+    }
 
+    public function text($string)
+    {
+        $operator = new Operator($string, $this);
+        $this->childrenByName[$string] = $operator;
+        $this->children[] = $operator;
+        return $operator;
+    }
+
+    public function eol()
+    {
+        $operator = new Operator("\n", $this);
+        $this->childrenByName["\n"] = $operator;
+        $this->children[] = $operator;
         return $operator;
     }
 
