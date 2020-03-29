@@ -8,9 +8,6 @@ It is a test to build some "complex logical contructions" with PHP
 ```php
 
 $construction = new XIsFx\Construction();
-
-
-$construction = new XIsFx\Construction();
 $construction
     ->pour()
         ->tout()->x
@@ -26,7 +23,6 @@ $construction
 
 echo $construction->render();
 echo PHP_EOL;
-
 
 $construction = new XIsFx\Construction();
 $construction
