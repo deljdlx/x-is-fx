@@ -15,7 +15,7 @@ $construction
         ->ilExiste()
             ->uneConstructionZ
                 ->dans()->langageDe()->E
-                ->diffenteDe()->x
+                ->diffenteDe()->E
                 ->enSurjection()
                     ->avec()
                         ->x
@@ -34,7 +34,7 @@ $construction
         ->ilExiste()
             ->uneConstructionZ
         ->dans()->langageDe()->E
-            ->diffenteDe()->x
+            ->diffenteDe()->E
             ->enSurjection()
             ->avec()
     ->x
@@ -49,7 +49,7 @@ $construction
         ->∈()->E
         ->∃()->z
             ->∈()->E
-            ->z->≠()->x
+            ->z->≠()->E
             ->text('/')
                 ->f('z')->equal('x')
     ;
